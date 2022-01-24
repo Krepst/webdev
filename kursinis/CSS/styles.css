@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+@keyframes pulsate {
+    0% {
+       transform:scale(1.0);
+   }
+   50% {
+       transform:scale(3.0);
+   }
+   100% {
+      transform:scale(1.0);
+   }
+}
+.grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 30% 10% repeat(2, 30%);
+  grid-template-rows: 5% 15% 10% 25% 40% 5%;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.pirmas:hover+.antras {
+  background-color: green;
+}
+
+.pirmas {
+  grid-area: 1 / 1 / 2 / 5;
+  background-color: lightblue;
+}
+
+.antras:hover+.trecias {
+  background-color: green;
+}
+
+.antras {
+  grid-area: 2 / 1 / 3 / 3;
+  background-color: orange;
+}
+
+.trecias:hover+.ketvirtas {
+  background-color: green;
+}
+
+.trecias {
+  grid-area: 2 / 3 / 3 / 5;
+  background-color: purple;
+}
+
+.ketvirtas:hover+.penktas {
+  background-color: green;
+}
+
+.ketvirtas {
+  grid-area: 3 / 1 / 4 / 2;
+  background-color: blue;
+  opacity: 80%;
+}
+
+.penktas:hover+.sestas {
+  background-color: green;
+}
+
+.penktas {
+  grid-area: 4 / 1 / 6 / 2;
+  background-color: yellow;
+}
+
+.sestas:hover+.septintas {
+  background-color: green;
+}
+
+.sestas {
+  grid-area: 3 / 2 / 5 / 4;
+  background-color: green;
+  transition: 4.5s ease-in .5s;
+}
+.sestas:hover {
+  transform: rotate(180deg);
+}
+
+.septintas:hover+.astuntas {
+  background-color: green;
+}
+
+.septintas {
+  grid-area: 5 / 2 / 6 / 4;
+  background-color: red;
+}
+
+.astuntas:hover+.devintas {
+  background-color: green;
+}
+
+.astuntas {
+  grid-area: 3 / 4 / 6 / 5;
+  background-color: black;
+  color: white;
+}
+.astuntas:hover p {
+  animation-name: pulsate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+.devintas {
+  grid-area: 6 / 1 / 7 / 5;
+  background-color: brown;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 5% 10% 15% 45% 20% 5%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .pirmas:hover~.trecias {
+    background-color: green;
+  }
+
+  .pirmas {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .antras {
+    display: none;
+  }
+
+  .trecias {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .ketvirtas:hover+.penktas {
+    background-color: yellow;
+  }
+
+  .ketvirtas {
+    grid-area: 3 / 1 / 4 / 2;
+    opacity: 100%;
+  }
+
+  /*.sestas:hover + .penktas{background-color: green;}*/
+  /* be java nesugebejau padaryti */
+  .sestas {
+    grid-area: 4 / 1 / 5 / 2;
+    opacity: 80%;
+  }
+
+  .penktas:hover~.astuntas {
+    background-color: green;
+  }
+
+  .penktas {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+
+  .septintas {
+    display: none;
+  }
+  p.astuntas:hover {
+    animation: pulsate 1.5s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 1.0;
+    transform: scale(1);
+    animation-delay: 3s;
+}
+  .astuntas {
+    grid-area: 3 / 2 / 6 / 3;
+  }
+
+  .devintas {
+    grid-area: 6 / 1 / 7 / 3;
+  }
+}

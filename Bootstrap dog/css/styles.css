@@ -1,0 +1,150 @@
+body {
+    font-family: 'Montserrat';
+    background-color: #ff4c68;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+p {
+    color: #8f8f8f;
+}
+
+/***** TEXT ****/
+
+.testimonal-text {
+    font-size: 1.5rem;
+}
+.features-text {
+    font-size: 2rem;
+}
+
+/***** TITLE ******/
+
+#title {
+    text-align: left;
+    color: white;
+    padding: 3% 15% 7%;
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.img-phone {
+    transform: rotate(25deg);
+    display: block;
+    width: 55%;
+    margin: 0 auto 0;
+    position: absolute;
+    right: 30%;
+}
+
+.navbar {
+    padding: 0 0 6%;
+}
+
+.nav-link {
+    font-weight: light;
+}
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+
+
+/******* FEATURES **********/
+
+#features {
+    margin: 0;
+    padding: 5% 15% 3%;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-icon {
+    color: #ff4c68;
+    font-size: 400%;
+    margin-bottom: 1rem;
+}
+
+.feature-icon:hover {
+    color: #ef1872;
+}
+
+
+
+/**** Testimionials *****/
+
+.testimonial-image {
+border-radius: 100%;
+width: 10%;
+}
+#testimonial-carousel {
+    padding: 5% 15% 5%;
+}
+.carousel-item {
+    transition: transform 1s ease, opacity .5s ease-out;
+}
+
+
+/******* PRESS *******/
+
+#press {
+    padding-bottom: 4%;
+}
+.press-logo {
+    width: 10%;
+    margin: 20px 20px 0;
+}
+
+/******** PRICING ***********/
+
+#pricing {
+    padding: 3% 15% 0;
+    background-color: #fff;
+}
+.pricing-column {
+    padding: 3% 2%;
+}
+
+@media (max-width: 1090px) {
+    #title {
+        text-align: center;
+    }
+    .img-phone {
+        position: static;
+        transform: rotate(0);
+    }
+}
+
+
+/************** CTA ***********/
+ 
+#cta {
+    padding: 4% 15% 0;
+    color: #fff;
+}
+.cta-txt {
+    font-size: 2.6rem;
+}
+
+
+/************* FOOTER ************/
+
+#footer {
+    background-color: #fff;
+    padding: 3% 15%;
+}
+.copyright {
+    font-size: 0.8rem;
+}
+.row-footer {
+    word-spacing: 1rem;
+}
